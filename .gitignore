@@ -1,0 +1,49 @@
+# Organization-specific context (contains sensitive org data)
+grc/skills/grc-knowledge/your-context.md
+
+# Evidence directories (contain sensitive audit artifacts)
+evidence/**
+!evidence/.gitkeep
+!evidence/README.md
+
+soc2-evidence/**
+!soc2-evidence/.gitkeep
+!soc2-evidence/README.md
+
+govramp-assessment/**
+!govramp-assessment/.gitkeep
+!govramp-assessment/README.md
+
+govramp-process/**
+!govramp-process/.gitkeep
+!govramp-process/README.md
+
+govramp-question-set/**
+!govramp-question-set/.gitkeep
+!govramp-question-set/README.md
+
+sp-package/**
+!sp-package/.gitkeep
+!sp-package/README.md
+
+# Output (generated content, org-specific)
+output/**
+!output/.gitkeep
+!output/evidence-map/.gitkeep
+!output/gaps/.gitkeep
+!output/isora-answer/.gitkeep
+!output/narratives/.gitkeep
+!output/pmo-reviews/.gitkeep
+!output/3pao-dryrun/.gitkeep
+!output/poam/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

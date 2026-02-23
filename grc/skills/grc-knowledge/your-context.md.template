@@ -1,0 +1,119 @@
+# Organization Context — GovRAMP/FedRAMP Workflow
+
+> Copy this file to `your-context.md` and fill in your organization's details.
+> `your-context.md` is gitignored to prevent accidental exposure of sensitive data.
+
+## System Information
+
+- **Service Provider**: [Your Company Name]
+- **System Name**: [Your System/Product Name]
+- **Cloud Service Model**: [SaaS / PaaS / IaaS]
+- **Cloud Deployment Model**: [Public Cloud (AWS/Azure/GCP) / Hybrid / Private]
+- **Target Authorization**: [GovRAMP Ready / FedRAMP Moderate / StateRAMP / etc.]
+- **Baseline**: [Low / Low+ / Moderate / High]
+- **Current Status**: [e.g., Progressing Snapshot, Ready, Authorized]
+
+## Key Personnel
+
+| Role | Name |
+|------|------|
+| System Owner | [Name] |
+| ISSO | [Name] |
+| GRC Analyst | [Name] |
+| Technical Lead | [Name] |
+
+## Current Snapshot Status
+
+| Metric | Value |
+|--------|-------|
+| Snapshot Score | [XX%] |
+| Core Controls Implemented | [X / 60] |
+| Ready Controls Implemented | [X / 80] |
+
+## Controls Requiring Attention
+
+| Control | Status | Issue |
+|---------|--------|-------|
+| [e.g., AC-02] | [Pass with Concerns / Fail / Not Completed] | [Brief description] |
+
+## Evidence Source Locations
+
+All paths relative to the project root:
+
+```
+evidence/                    # Control-family evidence folders (READ ONLY)
+├── AC-02/
+├── AC-04/
+├── ...
+soc2-evidence/               # SOC 2 audit artifacts (if applicable)
+govramp-process/             # Snapshot matrices, score letters
+govramp-question-set/        # ISORA question set CSV
+govramp-assessment/          # Full GovRAMP assessment evidence
+sp-package/                  # Official Moderate Impact SP Package templates
+output/                      # ALL generated content goes here
+```
+
+## SOC 2 Evidence Cross-Reference
+
+> If you have SOC 2 evidence, map your artifacts to GovRAMP controls here.
+> This helps the ISORA Risk Assessor cross-reference evidence across frameworks.
+
+| SOC 2 Artifact | Maps to GovRAMP Controls |
+|----------------|------------------------|
+| [e.g., AWS Audit Log Settings.docx] | [e.g., AU-02, AU-03] |
+| [e.g., Password Policy.docx] | [e.g., IA-05(01)] |
+
+## GovRAMP-Defined ODP Values
+
+> These are standard GovRAMP Moderate parameters. Adjust if your authorization target differs.
+
+| Control | Parameter | GovRAMP Value |
+|---------|-----------|---------------|
+| AC-2(h)(1) | Account change notification | **24 hours** |
+| AC-2(h)(2) | Account disable/remove notification | **8 hours** |
+| AC-2(j) | Account review frequency | **Quarterly** (privileged), **Annually** (non-privileged) |
+| AC-6(2) | Security functions scope | **All security functions** |
+| AU-11 | Audit record retention | **90 days online, 1 year total** |
+| CM-2(b)(1) | Baseline review frequency | **At least annually + significant change** |
+| IA-05(01) | Password authentication | Must include automated screening against compromised passwords |
+
+## Ground Rules
+
+1. **NEVER** edit or rename files in evidence folders — they are READ ONLY
+2. **ALL** generated content goes to `./output/` only
+3. **ALWAYS** cite specific artifact paths when making claims
+4. **ALWAYS** flag weak/indirect evidence — never assume sufficiency
+5. **Use GovRAMP parameters** — not NIST defaults
+6. **Match PMO language** — Pass / Pass with Concerns / Fail
+7. **Track evidence expiry** — flag anything within 3 months of expiration
+8. **Be adversarial in 3PAO mode** — find gaps before the real assessor does
+9. **Never fabricate evidence** — if it doesn't exist, document the gap
+10. **Score honestly** — maturity 4 means genuinely ready, not aspirational
+
+## SSP Narrative Format
+
+When generating narratives, use this structure for every control:
+1. **Control Summary** (1-2 sentences)
+2. **Implementation** (what is in place — name tools, services, configs)
+3. **Operational Process** (who does what, how often, approvals)
+4. **Evidence** (bulleted artifact paths)
+5. **Gaps / Assumptions** (only if needed)
+6. **Ready Delta** (what changed vs previous assessment phase)
+
+**Tone**: Clear, auditor-friendly, specific. No marketing language.
+
+## ISORA Risk Assessment
+
+> If using the ISORA assessment workflow, configure these paths:
+
+- **Question Set**: `govramp-question-set/GovRAMP_Ready_Assessment_YYYY.csv`
+- **Output CSV**: `output/isora-answer/GovRAMP_Ready_Assessment_YYYY_answered.csv`
+- **Risk Summary**: `output/isora-answer/risk-summary.md`
+- **Survey Template**: `output/isora-answer/survey-template.csv`
+
+Output format:
+```csv
+uuid,question_category,question_text,answer_text,answer_details,answer
+```
+
+Where `answer` = `favorable` or `unfavorable`. PE controls = `favorable` if inherited from cloud provider.
