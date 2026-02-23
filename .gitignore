@@ -18,14 +18,6 @@ govramp-process/**
 !govramp-process/.gitkeep
 !govramp-process/README.md
 
-govramp-question-set/**
-!govramp-question-set/.gitkeep
-!govramp-question-set/README.md
-
-sp-package/**
-!sp-package/.gitkeep
-!sp-package/README.md
-
 # Output (generated content, org-specific)
 output/**
 !output/.gitkeep

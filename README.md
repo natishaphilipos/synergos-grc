@@ -60,10 +60,14 @@ Plus 20 additional commands for control lookups, cross-framework mapping, gap an
 
 ## Quick Start
 
+### Step 0: Install the GRC Plugin
+
+Synergos is built on Mario Lunato's [claude-grc-plugin](https://github.com/mlunato47/claude-grc-plugin). Head to that repo first and follow the installation instructions to get the base plugin set up. This gives you the framework references, OSCAL data, and command definitions that Synergos extends.
+
 ### Step 1: Clone the Repo
 
 ```bash
-git clone https://github.com/natishaphilipos/synergos-grc.git
+git clone https://github.com/nathanimphilipos/synergos-grc.git
 cd synergos-grc
 ```
 
