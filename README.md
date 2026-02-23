@@ -14,7 +14,7 @@ Built on [claude-grc-plugin](https://github.com/mlunato47/claude-grc-plugin) by 
 
 ## What It Does
 
-Synergos provides **four AI roles** that work together to accelerate your path to authorization:
+Synergos provides **four GRC Agent roles** that work together to accelerate your path to authorization:
 
 | Role | What It Does | Command |
 |------|-------------|---------|
