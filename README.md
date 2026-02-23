@@ -6,6 +6,21 @@ Synergos turns Claude Code into a team of specialized GRC analysts that can simu
 
 ---
 
+> **⚠️ Before You Deploy: A Word on Security**
+>
+> Synergos gives AI agents read access to your compliance evidence — the same documents you'd hand to an auditor. That's powerful, and it's also something you should think about before you run it.
+>
+> **What to consider:**
+> - Your evidence folders may contain CUI, PII, system architecture details, vulnerability scan results, and network diagrams. Synergos reads these files to do its job.
+> - This project is an **open-source tool, not a hardened product**. It does not ship with its own access controls, encryption, audit logging, or data loss prevention.
+> - Follow the **principle of least privilege**: only give the agent access to the evidence it needs for the assessment you're running. Don't point it at your entire file system.
+> - **Assess the risk for your organization** before going full send. If your data is classified, sensitive, or subject to handling requirements — scope your usage accordingly.
+> - Synergos writes output to `./output/` only and never modifies evidence. But you're responsible for where that output goes next.
+>
+> **TL;DR:** Synergos is a sharp tool built for GRC practitioners who understand what they're working with. Treat your evidence folders like you'd treat any sensitive data — because that's exactly what they are. We built this to help, not to babysit. Use it wisely.
+
+---
+
 ## Credits
 
 Built on [claude-grc-plugin](https://github.com/mlunato47/claude-grc-plugin) by **Mario Lunato** — the foundational Claude Code plugin providing 15+ framework references, 24 commands, 72+ reference files, and OSCAL structured data. Mario's work made the entire GRC-as-code approach possible. Synergos extends his open-source plugin with GovRAMP/FedRAMP workflow optimization, agentic assessment automation, and integration patterns for real-world authorization journeys.
