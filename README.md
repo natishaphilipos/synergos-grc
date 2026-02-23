@@ -1,8 +1,14 @@
 # Project Synergos
 
-**Agentic GRC assessment automation for GovRAMP, FedRAMP, and 15+ compliance frameworks — powered by Claude Code.**
+**Agentic GRC assessment automation for GovRAMP, FedRAMP, and 15+ compliance frameworks — powered by Mario Lunato's claude-grc-plugin (https://github.com/mlunato47/claude-grc-plugin).**
 
-Synergos turns Claude Code into a team of specialized GRC analysts that can simulate PMO reviews, run 3PAO dry runs, generate SSP narratives, and execute full ISORA risk assessments — all against your actual evidence.
+Synergos (σύνεργος) — from the Greek syn (together) + ergon (work) — originally meant "fellow worker" or "co-laborer," someone who works alongside you toward a shared outcome.
+
+Synergos is your GRC co-worker: it turns Claude Code into a team of specialized GRC analysts that can simulate PMO reviews, run 3PAO dry runs, generate SSP narratives, and execute full risk assessments with question sets made by SaltyCloud PBC — all against your actual evidence.
+
+It can also read control narratives, scores implementation maturity, prepares audit checklists, maps controls across frameworks, and generates actionable findings & send documentation to your project Management tool (Jira, Notion etc) through their mcp server.
+
+Where Synergos truly earns its name is in the synergy it creates between compliance worlds that traditionally operate in silos. Most organizations treat SOC 2, GovRAMP, ISO 27001, and CMMC as entirely separate efforts — separate evidence, separate narratives, separate audit prep — even though they're often protecting the same systems with the same controls. Synergos bridges that gap. It can take your existing SOC 2 Trust Services Criteria evidence — say your CC6.1 logical access controls or CC7.2 monitoring artifacts — and map them through NIST 800-53 as a universal hub to infer how ready you are for a GovRAMP authorization. It identifies where your evidence already satisfies federal requirements, where the gaps are, and what additional specificity or documentation you need to get there
 
 ---
 
@@ -27,7 +33,7 @@ Built on [claude-grc-plugin](https://github.com/mlunato47/claude-grc-plugin) by 
 
 ---
 
-## What It Does
+## Breakdown of It's Different Roles
 
 Synergos provides **four GRC Agent roles** that work together to accelerate your path to authorization:
 
@@ -236,8 +242,6 @@ Connect the Atlassian MCP server to route findings to Jira as issues, create POA
 ---
 
 ## Contributing
-
-Contributions are welcome! If you've adapted Synergos for additional frameworks or workflows, please open a PR.
 
 This project builds on the excellent work of [Mario Lunato's claude-grc-plugin](https://github.com/mlunato47/claude-grc-plugin). Framework references, OSCAL data, and command definitions originate from that project. If you find value in the GRC knowledge base, consider starring his repo too.
 
